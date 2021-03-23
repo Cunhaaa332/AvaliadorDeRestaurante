@@ -7,7 +7,27 @@
 
     <fragment
         android:id="@+id/listAvaliacoesFragment"
-        android:name="com.infnet.avaliadorderestaurantes.ListAvaliacoesFragment"
+        android:name="com.infnet.avaliadorderestaurantes.ui.avaliacao.listUserAvaliacoes.ListAvaliacoesFragment"
         android:label="list_avaliacoes_fragment"
         tools:layout="@layout/list_avaliacoes_fragment" />
+    <fragment
+        android:id="@+id/formAvaliacaoFragment"
+        android:name="com.infnet.avaliadorderestaurantes.ui.avaliacao.form.FormAvaliacaoFragment"
+        android:label="form_avaliacao_fragment"
+        tools:layout="@layout/form_avaliacao_fragment" />
+    <fragment
+        android:id="@+id/listRestaurantesFragment"
+        android:name="com.infnet.avaliadorderestaurantes.ui.avaliacao.listTotalAvaliacoes.ListRestaurantesFragment"
+        android:label="list_restaurantes_fragment"
+        tools:layout="@layout/list_restaurantes_fragment" />
+    <fragment
+        android:id="@+id/cadastroUsuarioFragment"
+        android:name="com.infnet.avaliadorderestaurantes.ui.usuario.cadastro.CadastroUsuarioFragment"
+        android:label="cadastro_usuario_fragment"
+        tools:layout="@layout/cadastro_usuario_fragment" />
+    <fragment
+        android:id="@+id/loginUsuarioFragment"
+        android:name="com.infnet.avaliadorderestaurantes.ui.usuario.login.LoginUsuarioFragment"
+        android:label="login_usuario_fragment"
+        tools:layout="@layout/login_usuario_fragment" />
 </navigation>
