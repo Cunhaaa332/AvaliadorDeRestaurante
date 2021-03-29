@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "944328239552",
+    "project_id": "avaliadorrestaurantes",
+    "storage_bucket": "avaliadorrestaurantes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944328239552:android:481d8cd5c7da6f380dc025",
+        "android_client_info": {
+          "package_name": "com.infnet.avaliadorderestaurantes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944328239552-7e076g87npfvqc5b56ci16distf34b40.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3TYHF2yQwolMvUKZIYUeeQAO0Qc3Ofdg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944328239552-7e076g87npfvqc5b56ci16distf34b40.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
