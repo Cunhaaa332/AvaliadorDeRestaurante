@@ -39,7 +39,6 @@ class FormAvaliacaoFragment : Fragment() {
                 }
             }
         }
-
         return view
     }
 
