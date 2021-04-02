@@ -15,4 +15,11 @@ class Avaliacao (
         var usuarioId: String? = null,
         @DocumentId
         var id: String? = null
-        )
+        ){
+        override fun toString(): String =
+                "Nome do Restaurante: $nomeDoRestaurante \n" +
+                "Bairro do Restaurante: $bairro \n" +
+                "Porcentagem da Avaliação: $porcentagem%"
+
+
+}

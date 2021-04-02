@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.infnet.avaliadorderestaurantes.R
 import com.infnet.avaliadorderestaurantes.database.AvaliacaoDaoFirestore
 import com.infnet.avaliadorderestaurantes.database.AvaliacaoUtil
+import com.infnet.avaliadorderestaurantes.database.UsuarioFirebaseDao
 import kotlinx.android.synthetic.main.list_avaliacoes_fragment.*
 
 class ListAvaliacoesFragment : Fragment() {
@@ -37,6 +39,18 @@ class ListAvaliacoesFragment : Fragment() {
                 findNavController().navigate(R.id.formAvaliacaoFragment)
             }
         }
+
+        viewModel.usuario.observe(viewLifecycleOwner, Observer {
+            if(it != null) {
+                textViewUserName.text = it.nome + it.sobrenome
+            }
+            else if(UsuarioFirebaseDao.firebaseAuth.currentUser == null) {
+                findNavController().navigate(R.id.loginUsuarioFragment)
+                textViewUserName.text = null
+            }
+        })
+        viewModel.attPerfil()
+
         viewModel.attListAvaliacoes()
         return view
     }

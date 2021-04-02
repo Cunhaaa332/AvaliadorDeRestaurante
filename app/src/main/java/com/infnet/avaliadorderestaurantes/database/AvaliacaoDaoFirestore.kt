@@ -26,7 +26,7 @@ class AvaliacaoDaoFirestore: AvaliacaoDao {
     }
 
     override fun allForAllUsers(): Task<QuerySnapshot> {
-        return collection.get()
+        return collection.orderBy("bairro").get()
     }
 
     override fun read(key: String): Query {
