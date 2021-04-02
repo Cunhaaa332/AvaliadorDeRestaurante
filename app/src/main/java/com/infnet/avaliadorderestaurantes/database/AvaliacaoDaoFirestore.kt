@@ -8,7 +8,7 @@ import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QuerySnapshot
 import com.infnet.avaliadorderestaurantes.model.Avaliacao
 
-class AliacaoDaoFirestore: AvaliacaoDao {
+class AvaliacaoDaoFirestore: AvaliacaoDao {
     private val collection = FirebaseFirestore.getInstance().collection("avaliacoes")
     private val firebaseAuth = FirebaseAuth.getInstance()
 
