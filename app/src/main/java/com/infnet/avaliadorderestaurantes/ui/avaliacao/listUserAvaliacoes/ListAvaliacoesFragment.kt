@@ -42,7 +42,7 @@ class ListAvaliacoesFragment : Fragment() {
 
         viewModel.usuario.observe(viewLifecycleOwner, Observer {
             if(it != null) {
-                textViewUserName.text = it.nome + it.sobrenome
+                textViewUserName.text = it.nome + " " + it.sobrenome
             }
             else if(UsuarioFirebaseDao.firebaseAuth.currentUser == null) {
                 findNavController().navigate(R.id.loginUsuarioFragment)
@@ -63,6 +63,9 @@ class ListAvaliacoesFragment : Fragment() {
         }
         fabAllAv.setOnClickListener{
             findNavController().navigate(R.id.listRestaurantesFragment)
+        }
+        fabLogOut.setOnClickListener{
+            viewModel.encerrarSessao()
         }
     }
 }
