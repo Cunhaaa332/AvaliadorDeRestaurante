@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.infnet.avaliadorderestaurantes.database.AvaliacaoDao
+import com.infnet.avaliadorderestaurantes.database.CriptoString
 import com.infnet.avaliadorderestaurantes.model.Avaliacao
 
 class FormAvaliacaoViewModel(private val avaliacaoDao: AvaliacaoDao) : ViewModel() {
@@ -19,7 +20,7 @@ class FormAvaliacaoViewModel(private val avaliacaoDao: AvaliacaoDao) : ViewModel
         _message.value = null
     }
 
-    fun salvarAvaliacao(nomedoRestaurante: String, bairro: String, respostaA: String,
+    fun salvarAvaliacao(nomedoRestaurante: CriptoString, bairro: CriptoString, respostaA: String,
                         respostaB: String, respostaC: String, respostaD: String,
                         respostaE: String, respostaF: String, porcentagem: Float){
 

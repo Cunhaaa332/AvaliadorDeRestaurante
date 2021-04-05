@@ -36,7 +36,6 @@ class ListAvaliacoesFragment : Fragment() {
             listViewAvaliacoesUser.setOnItemClickListener { parent, view, position, id ->
                 val avaliacao = it.get(position)
                 AvaliacaoUtil.avaliacaoSelecionada = avaliacao
-                findNavController().navigate(R.id.formAvaliacaoFragment)
             }
         }
 

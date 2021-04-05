@@ -1,15 +1,18 @@
 package com.infnet.avaliadorderestaurantes.ui.avaliacao.form
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.infnet.avaliadorderestaurantes.R
 import com.infnet.avaliadorderestaurantes.database.AvaliacaoDaoFirestore
+import com.infnet.avaliadorderestaurantes.database.CriptoString
 import kotlinx.android.synthetic.main.form_avaliacao_fragment.*
 import kotlinx.android.synthetic.main.list_avaliacoes_fragment.*
 
@@ -42,6 +45,7 @@ class FormAvaliacaoFragment : Fragment() {
         return view
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         imageViewBackCadAv.setOnClickListener{
@@ -49,8 +53,10 @@ class FormAvaliacaoFragment : Fragment() {
         }
 
         btnCadastrarAvaliacao.setOnClickListener {
-            val nomeDoRestaurante = inputTextNomeRestaurante.text.toString()
-            val bairro = inputTextBairroRestaurante.text.toString()
+            val nomeDoRestaurante = CriptoString()
+            nomeDoRestaurante.setClearText(inputTextNomeRestaurante.text.toString())
+            val bairro = CriptoString()
+            bairro.setClearText(inputTextBairroRestaurante.text.toString())
             val respostaA = pegaRespostaQ1()
             val respostaB = pegaRespostaQ2()
             val respostaC = pegaRespostaQ3()
